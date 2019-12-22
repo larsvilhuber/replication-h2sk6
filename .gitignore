@@ -1,0 +1,9 @@
+*.aux
+*.mat
+*.sas7bdat
+*.dta
+*.csv
+*.zip
+*.gz
+*.DS_Store
+__MACOSX/
