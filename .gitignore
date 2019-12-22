@@ -1,4 +1,5 @@
 *.aux
+*.dat
 *.mat
 *.sas7bdat
 *.dta

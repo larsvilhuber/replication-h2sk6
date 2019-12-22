@@ -1,16 +1,12 @@
-# replication-template
-A template for starting a replication/ reproducibility exercise.
+# replication of 10.31235/osf.io/h2sk6
 
-To start, DOWNLOAD (do not clone) this repository
- - click on the green Download button over to the right
- - use [this link](https://github.com/AEADataEditor/replication-template/archive/master.zip)
- - from the command line,
-```
-wget https://github.com/AEADataEditor/replication-template/archive/master.zip
-```
+Replication template from https://github.com/AEADataEditor/replication-template
 
-Afterwards, you should download the manuscript or article code archive, and unzip it on top of the template.
+# Source article:
 
-> Delete this README! (If you leave it, it's like keeping your price tag on your jacket...)
+> Cohen, Philip N. 2018. “The Coming Divorce Decline.” SocArXiv. September 14. https://doi.org/10.1177/2378023119873497
 
-Finally, create a NEW repository as directed by your supervisor, and commit the initial set of code (but not data). Then start running things!
+# Source data
+
+Cohen, Philip N. 2019. “The Coming Divorce Decline [data and code].” OSF. August 8. https://osf.io/yb4hr
+
