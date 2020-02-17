@@ -1,9 +1,4 @@
-# [MC number] [Manuscript Title] Validation and Replication results
-> INSTRUCTIONS: Once you've read these instructions, DELETE THESE AND SIMILAR LINES.
-> In the above title, replace [Manuscript Title] with the actual title of the paper, and [MC number] with the Manuscript Central number (e.g., AEJPol-2017-0097)
-> Go through the steps to download and attempt a replication. Document your steps here, the errors generated, and the steps you took to alleviate those errors.
-
-You may want to consult [Unofficial Verification Guidance](https://social-science-data-editors.github.io/guidance/Verification_guidance.html) for additional tips and criteria.
+# ["The Coming Divorce Decline""] Validation and Replication results
 
 SUMMARY
 -------
@@ -14,66 +9,37 @@ SUMMARY
 Data description
 ----------------
 
-> INSTRUCTIONS: Identify all data sources. Create a list (and commit the list together with this report) (not needed if filling out the "Data Citation and Information report"). For each data source, list in THIS document presence or absence of source, codebook/information on the data, and summary statistics. Summary statistics and codebook may not be necessary if they are available for public use data. In all cases, if the author of the article points to an online location for such information, that is OK. Check for data citation. IN THIS DOCUMENT, point out only a summary of shortcomings.
-
 ### ICPSR data deposit
+- openICPSR metadata is not applicable here
 
-> INSTRUCTIONS: Most deposits will be at openICPSR, but all need to be checked for complete metadata. Detailed guidance is at [https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html). 
-
-- [ ] JEL Classification (required)
-- [ ] Manuscript Number (required)
-- [ ] Subject Terms (highly recommended)
-- [ ] Geographic coverage (highly recommended)
-- [ ] Time period(s) (highly recommended)
-- [ ] Collection date(s) (suggested)
-- [ ] Universe (suggested)
-- [ ] Data Type(s) (suggested)
-- [ ] Data Source (suggested)
-- [ ] Units of Observation (suggested)
-
-> INSTRUCTIONS: Go through the checklist above, and then choose ONE of the following results:
-
-- [NOTE] openICPSR metadata is sufficient.
-
-or
-
-- [REQUIRED] Please update the following fields listed in this report. For additional guidance, see [https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html).
-
-- [SUGGESTED] Please update the following fields listed in this report. For additional guidance, see [https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html](https://aeadataeditor.github.io/aea-de-guidance/data-deposit-aea-guidance.html).
+### American Community Survey
+- The article uses women's responses to martial events questions in the ACS to evaluate trends in divorce over the past decade
+- The data is publicly available and commonly known, but it is not cited in the manuscript. This should be cited.
+- Data specifically used in this article can be accessed at: https://osf.io/yb4hr/
 
 Data checks
 -----------
-> INSTRUCTIONS: When data are present, run checks:
 > - can data be read (using software indicated by author)?
+- I do not have a software that can read the data
 > - Is data in archive-ready formats (CSV, TXT) or in custom formats (DTA, SAS7BDAT, Rdata)?
+- Data is in .dat format
 > - Does the data have variable labels (Stata: run `describe using (name of DTA)` and check that there is content in the column "variable label")?
+- Variable labels cannot be checked
 > - Run check for PII ([PII_stata_scan.do](PII_stata_scan.do), sourced from [here](https://github.com/J-PAL/stata_PII_scan) if using Stata) and report results. Note: this check will have lots of false positives - fields it thinks might be sensitive that are not, in fact, sensitive. Apply judgement.
+- PII could not scan the .dat files
 
 
 Code description
 ----------------
-> INSTRUCTIONS: Review the code (but do not run it yet). Identify all **Figure, Table, and any in-text numbers**. Create a list, mapping each of them to a particular program and line number within the program (use [this template](code-check-TEMPLATE.xlsx)). Commit that list. You will come back to the list in your findings. IN THIS SECTION, point out only a summary description, including of shortcomings. E.g.
 
-There are four provided Stata do files, three Matlab .m files, including a "master.do". 
-- Table 5: could not identify code that produces Table 5
-- Neither the program codes, nor the README, identify which tables are produced by what program.
-
-> NOTE: In-text numbers that reference numbers in tables do not need to be listed. Only in-text numbers that correspond to no table or figure need to be listed.
+There are two provided stata files, one titled "decline.do" and another titled "coming divorce decline with newlyweds.do"
 
 Replication steps
 -----------------
 
-> INSTRUCTIONS: provide details about your process of accessing the code and data.
-> Do NOT detail things like "I save them on my Desktop".
-> DO describe actions   that you did  as per instructions ("I added a config.do")
-> DO describe any other actions you needed to do ("I had to make changes in multiple programs"), without going into detail (the commit log can provide that information)
-
-Example:
-1. Downloaded code from URL provided.
-2. Downloaded data from URL indicated in the README. A sign-up was required (not indicated in README)
-3. Added the config.do generating system information, but commented out log creation, as author already creates log files.
-4. Ran code as per README, but the third step did not work.
-5. Made changes to the way the third step is run to get it to work.
+1. Downloaded code and data from the socarxiv website
+2. Added the config.do generating system information
+3. Set the Stata working directory as requested and ran decline.do
 
 Computing Environment
 ---------------------
