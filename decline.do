@@ -3,10 +3,11 @@
 * NOTE: You need to set the Stata working directory to the path
 * where the data file is located.
 
-global pathname "."
+global pathname "U:/Documents/Workspace/socarxiv/replication-h2sk6"
 set more off
 
 clear
+do config.do
 quietly infix              ///
   int     year      1-4    ///
   byte    statefip  5-6    ///
@@ -25,7 +26,7 @@ quietly infix              ///
   byte    racpacis  36-36  ///
   byte    racwht    37-37  ///
   int     educd     40-42  ///
-  using "$pathname/usa_00388.dat"
+  using "${pathname}/usa_00388.dat"
     
 /* sample is 2008-2017 American Community Surveys, women age 15+ who have ever
    been married and lived in the US one year before the survey */

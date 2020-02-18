@@ -6,6 +6,8 @@
 set more off
 
 clear
+global pathname "U:/Documents/Workspace/socarxiv/replication-h2sk6"
+do config.do
 quietly infix              ///
   int     year      1-4    ///
   byte    statefip  5-6    ///
@@ -24,7 +26,7 @@ quietly infix              ///
   byte    racpacis  36-36  ///
   byte    racwht    37-37  ///
   int     educd     40-42  ///
-  using "C:\Users\pnc\Downloads\usa_00388.dat"
+  using "${pathname}/usa_00388.dat"
     
 /* sample is 2008-2017 American Community Surveys, women age 15+ who have ever
    been married and lived in the US one year before the survey */
@@ -186,7 +188,7 @@ quietly infix              ///
   byte    race_sp    39-39  ///
   byte    hispan_sp  40-40  ///
   int     educd_sp   41-43  ///  
-  using "C:\Users\pnc\Downloads\usa_00400.dat"
+  using "${pathname}/usa_00400.dat"
 
 /*  2008-2017 ACS, sample is women who married in the year before the survey. */
 
