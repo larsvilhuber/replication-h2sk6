@@ -1266,3 +1266,4 @@ Expression   : Linear prediction, predict()
 . 
 end of do-file
 
+. exit, clear
